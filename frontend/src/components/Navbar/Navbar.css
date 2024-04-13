@@ -1,0 +1,29 @@
+/* Navbar.css */
+.navbar {
+  background: #50B8B3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem;
+  position: relative;
+}
+
+.navbar-logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.navbar-icon {
+  color: white;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+}
+
+.hidden {
+  visibility: hidden;
+}
+.right-test{
+  margin-left: 90%;
+}

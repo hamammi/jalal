@@ -1,0 +1,36 @@
+.image-view-container {
+  position: relative;
+  display: inline-block; /* أو block حسب تفضيلك */
+  width: auto; /* يمكن تعديله لتحديد عرض محدد */
+}
+
+.full-image {
+  display: block; /* لضمان عدم وجود هوامش حول الصورة */
+  max-width: 100%; /* لجعل الصورة تلائم عرض الحاوية */
+  height: auto; /* للحفاظ على نسب الصورة */
+}
+
+.overlay-logo-view {
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  opacity: 0.5; /* قابل للتعديل لجعل الشعار أكثر أو أقل شفافية */
+  width: 40%; /* لجعل الشعار يغطي الصورة بالكامل */
+}
+.back-button {
+  position: absolute; /* لوضع الزر فوق الصورة أو في ركن من الصفحة */
+  top: 20px; /* تعديل حسب الحاجة */
+  left: 20px; /* تعديل حسب الحاجة */
+  padding: 10px 20px;
+  background-color: #f00; /* أو أي لون آخر */
+  color: #fff; /* لون النص */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer; /* يظهر المؤشر كيد عند الوقوف فوق الزر */
+  opacity: 0.7; /* يمكن تعديل الشفافية */
+}
+
+.back-button:hover {
+  opacity: 1; /* زيادة الشفافية عند التحويم */
+}
+

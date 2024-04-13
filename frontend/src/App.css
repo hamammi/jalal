@@ -1,0 +1,31 @@
+/* body {
+  text-align: center;
+
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+}
+:root {
+  margin: 0;
+  padding: 0;
+  --a: #2a4d69;
+  --b: #d2d8e0;
+  --c: #bcc4d1;
+  --d: #a6b1c1;
+  --e: #909eb2;
+}
+
+.lightMood {
+  --words: #223d66;
+  --background: whitesmoke;
+color: var(--words);
+}
+
+.darkMood {
+  --words: black;
+  --background: pink;
+
+  color: var(--words);
+} */
+
+body{
+  background-color: rgb(235, 233, 233);
+}

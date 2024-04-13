@@ -1,0 +1,36 @@
+.dashboard {
+    display: flex;
+    height: 100vh;
+    flex-direction: row-reverse; /* هذا سيضع الشريط الجانبي على اليمين */
+
+  }
+  
+  .sidebar {
+    flex: 0 0 250px; /* ضبط العرض حسب الحاجة */
+    background-color: #afe6e3; /* استخدام اللون الأصفر كمثال */
+    padding: 20px;
+  }
+  
+  .sidebar ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .sidebar ul li {
+    padding: 10px;
+    margin-bottom: 10px;
+    background: #f0f0f0; /* استخدام لون خلفية فاتح كمثال */
+    cursor: pointer;
+  }
+  
+  .sidebar ul li:hover {
+    background-color: #e0e0e0; /* تغير لون الخلفية عند التمرير */
+  }
+  
+  .content {
+    flex: 1;
+    padding: 20px;
+    background-color: #ffffff; /* استخدام اللون الأبيض كمثال */
+    overflow-y: auto;
+  }
+  

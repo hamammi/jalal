@@ -1,0 +1,144 @@
+.products-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: white;
+  border-radius: 10px;
+  margin: 10%;
+  padding: 1%;
+}
+
+.product-box {
+  display: flex;
+  flex-direction: row; /* تغيير من column إلى row */
+  justify-content: center;
+  align-items: center;
+  margin: 5%;
+  padding: 5%;
+  padding-left: 0;
+  border: 1px solid black;
+  border-radius: 10px;
+  width: calc(50% - 10%);
+}
+
+.image-section, .info-section {
+  flex: 1; /* يعطي كلا القسمين نفس المساحة */
+  padding: 10px; /* يضيف هوامش داخلية */
+}
+
+.image-link {
+  position: relative;
+  display: block; /* تغيير من inline-block إلى block */
+  width: 80%;
+  /* text-align: center; لتوسيط الصور */
+}
+
+.product-image, .overlay-logo {
+  max-width: 80%; /* ضمان عدم تجاوز الصور لعرض القسم */
+  border-radius: 10px;
+}
+
+.overlay-logo {
+  position: absolute;
+  bottom: 100px;
+  /* right: 5px; */
+  left: 50px;
+  width: 50%;
+  opacity: 0.3;
+}
+
+.product-info {
+  text-align: left;
+}
+
+.product-name {
+  font-size: 2.5em;
+}
+
+.product-description {
+  font-size: 1.5em;
+}
+.modal {
+  position: fixed; /* أو 'absolute' حسب التفضيل */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* شفافية للخلفية */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* لضمان ظهور المودال فوق بقية العناصر */
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 50%; /* أو حسب التفضيل */
+  max-width: 500px; /* للتأكد من أن المودال لن يكون كبيرًا جدًا على الشاشات الصغيرة */
+}
+
+.close-button {
+  float: right;
+  font-size: 1.5em;
+  font-weight: bold;
+  cursor: pointer;
+}
+.button-color{
+  background-color: #50B8B3;
+}
+.modal-body {
+  margin-top: 20px;
+}
+
+/* أنماط للأزرار والمدخلات داخل المودال */
+.modal-body button, .modal-body input {
+  margin: 10px 0;
+  padding: 10px;
+}
+
+.modal-body button {
+  background-color: #50B8B3;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.modal-body button:hover {
+  opacity: 0.8;
+}
+
+.modal-body input {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: calc(100% - 22px); /* لضبط العرض بما يتناسب مع padding */
+}
+
+
+@media only screen and (max-width: 600px) {
+  .product-box {
+    flex-direction: row; /* في الشاشات الصغيرة، يعود التوجه ليكون فوق وتحت */
+    width: calc(100% - 10%);
+  }
+
+  .image-section, .info-section {
+    width: 100%; /* لضمان استحواذ كل قسم على عرض الصفحة بأكمله */
+  }
+  .overlay-logo {
+    position: absolute;
+    bottom: 60px;
+    /* right: 5px; */
+    left: 40px;
+    width: 50%;
+    opacity: 0.3;
+  }
+  .product-name {
+    font-size: 1.5em;
+  }
+  
+  .product-description {
+    font-size: 1.0em;
+  }
+}

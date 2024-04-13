@@ -1,0 +1,32 @@
+.createCategoryContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* إزالة justify-content: center; لتجنب وضع العناصر في المنتصف الرأسي */
+    padding-top: 50px; /* أو أي قيمة تراها مناسبة لتوفير الفراغ العلوي */
+    min-height: 100vh;
+}
+
+.createCategoryInput,
+.createCategorySelect {
+    margin: 15px; /* تعديل لتوفير مسافة أكبر بين العناصر */
+    width: 300px; /* زيادة العرض لجعل العناصر أكبر */
+    padding: 10px; /* زيادة الحشوة لمزيد من الراحة في الإدخال */
+    font-size: 16px; /* تكبير النص داخل العناصر */
+}
+
+.createCategoryButton {
+    margin: 15px;
+    width: 200px;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.createCategoryButton:hover {
+    background-color: #0056b3;
+}

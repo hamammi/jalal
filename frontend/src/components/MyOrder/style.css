@@ -1,0 +1,43 @@
+.order-page {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.items-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.item-card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    gap: 10px;
+}
+
+.item-image {
+    width: 100px;
+    height: auto;
+    border-radius: 5px;
+}
+
+.item-info {
+    flex-grow: 1;
+}
+
+.confirm-btn {
+    margin-top: 20px;
+    width: 100%;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #50B8B3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
