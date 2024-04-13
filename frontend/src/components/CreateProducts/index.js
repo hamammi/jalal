@@ -13,7 +13,7 @@ const CreateProducts = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        axios.get(`http://localhost:5000/categories/`)
+        axios.get(`https://jalal.store:5000/categories/`)
             .then((res) => {
                 setCategories(res.data.categories);
             })
@@ -48,7 +48,7 @@ const CreateProducts = () => {
             if (response.ok) {
                 setImageUrl(result.secure_url); 
                 const url = result.secure_url
-                axios.post(`http://localhost:5000/posts/newProduct`,({url,productDescription,productName,selectedCategory}))
+                axios.post(`https://jalal.store:5000/posts/newProduct`,({url,productDescription,productName,selectedCategory}))
                 .then((res) => {
                     navigate('/admin')
                     

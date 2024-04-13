@@ -16,7 +16,7 @@ const Login = () => {
     };
 
     axios
-      .post("http://localhost:5000/admin/login", user)
+      .post("https://jalal.store:5000/admin/login", user)
       .then((result) => {
          setTimeout(() => {
             setTimeout(() => {

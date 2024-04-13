@@ -16,7 +16,7 @@ const Register = () => {
     };
 
     axios
-      .post("http://localhost:5000/admin/register", user)
+      .post("https://jalal.store:5000/admin/register", user)
       .then((result) => {
          setTimeout(() => {
             setTimeout(() => {

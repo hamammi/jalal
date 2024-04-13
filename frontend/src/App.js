@@ -13,7 +13,6 @@ function App() {
   
   return (
     <div className="App">
-      
       <Navbar/>
       <Routes>
         <Route path="/admin" element={<Admin />} />
@@ -24,13 +23,7 @@ function App() {
         <Route path="/viewImage" element={<ViewImage/>} />
         <Route path="/my-order" element={<MyOrder/>} />
         <Route path="/order/:orderId" element={<ConfirmeOrder/>} />
-         
-        {/* <Route path="/createProducts" element={<CreateProducts />} /> */}
-        {/* <Route path="/" element={<><Home /></>} /> */}
-        {/* <Route path="/posts/3" element={<><Posts /></>} /> */}
-        {/* <Route path="/login" element={<Login />} /> */}
       </Routes>
-      {/* <Footerar/>:<Footerar/> */}
       
     </div>
   );

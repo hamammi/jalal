@@ -11,7 +11,7 @@ const CreateCategory = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        axios.get(`http://localhost:5000/color/`)
+        axios.get(`https://jalal.store:5000/color/`)
             .then((res) => {
                 setColors(res.data.color);
 
@@ -23,7 +23,7 @@ const CreateCategory = () => {
 
     const handleSubmit = () => {
         if(selectedColorId && categoryName){
-            axios.post(`http://localhost:5000/categories/`,({selectedColorId,categoryName,description}))
+            axios.post(`https://jalal.store:5000/categories/`,({selectedColorId,categoryName,description}))
             .then((res) => {
                 navigate("/admin")
 

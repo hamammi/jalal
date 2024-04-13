@@ -22,14 +22,14 @@ const GetAllProductByCategoriesID = () => {
     if (!categoryid) {
       categoryid = localStorage.getItem('categoryid');
     }
-    axios.get(`http://localhost:5000/posts/categories/${categoryid}`)
+    axios.get(`https://jalal.store:5000/posts/categories/${categoryid}`)
       .then(res => {setProducts(res.data.Productss)
       })
       .catch(err => console.error(err));
   }, [categoryid]);
   const handleAddToCart = () => {
         const orderId = localStorage.getItem('orderId');
-        axios.post(`http://localhost:5000/item/`, {
+        axios.post(`https://jalal.store:5000/item/`, {
           quantity,
           color,
           notes,
@@ -52,7 +52,7 @@ const GetAllProductByCategoriesID = () => {
   };
 
   const handleCreateOrder = () => {
-    axios.post(`http://localhost:5000/order/`, {
+    axios.post(`https://jalal.store:5000/order/`, {
       phoneNumber,
       fullName,
     })

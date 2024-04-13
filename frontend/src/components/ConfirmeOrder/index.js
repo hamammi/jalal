@@ -8,20 +8,12 @@ const ConfirmeOrder = () => {
     const [myItems, setMyItems] = useState([]);
 
     useEffect(() => {
-        axios.get(`http://localhost:5000/item/byOrder/${orderId}`) // استخدام orderId من المسار
+        axios.get(`https://jalal.store:5000/item/byOrder/${orderId}`) // استخدام orderId من المسار
             .then(res => {
                 setMyItems(res.data.Productss);
             })
             .catch(err => console.error(err));
     }, [orderId]); // إضافة orderId كاعتمادية لـ useEffect
-
-    const confirmOrder = () => {
-        const whatsappNumber = "9620790987058";
-        const message = `Confirm your order by visiting: http://localhost:3000/order/${orderId}`;
-        const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
-        window.open(whatsappUrl, '_blank');
-    };
-
     return (
         <div className="order-page">
             <h1>تفاصيل الطلب</h1>

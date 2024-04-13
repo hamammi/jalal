@@ -9,14 +9,14 @@ const Home = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get(`http://localhost:5000/categories/`)
+    axios.get(`https://jalal.store:5000/categories/`)
       .then((res) => {
         setCategories(res.data.categories);
       })
       .catch((err) => {
         console.error(err);
       });
-    axios.get(`http://localhost:5000/color/`)
+    axios.get(`https://jalal.store:5000/color/`)
       .then((res) => {
         setColors(res.data.color);
       })

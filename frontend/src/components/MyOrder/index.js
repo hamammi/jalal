@@ -7,7 +7,7 @@ const MyOrder = () => {
     const [myItems, setMyItems] = useState([]);
 
     useEffect(() => {
-        axios.get(`http://localhost:5000/item/byOrder/${orderID}`)
+        axios.get(`https://jalal.store:5000/item/byOrder/${orderID}`)
             .then(res => {
                 setMyItems(res.data.Productss);
             })
@@ -16,7 +16,7 @@ const MyOrder = () => {
 
     const confirmOrder = () => {
         const whatsappNumber = "9620790987058"; // ضع رقم واتساب الذي تريد إرسال الرسالة إليه هنا
-        const message = `Confirm your order by visiting: http://localhost:3000/order/${orderID}`;
+        const message = `Confirm your order by visiting: https://jalal.store:3000/order/${orderID}`;
         const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
         window.open(whatsappUrl, '_blank');
     };
